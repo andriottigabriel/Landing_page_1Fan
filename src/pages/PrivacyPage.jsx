@@ -43,10 +43,10 @@ export default function PrivacyPage() {
 
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
-                <div className="container mx-auto px-6 py-4">
+                <div className="container mx-auto px-6 py-4 flex flex-col items-center sm:flex-row sm:justify-between">
                     <Link
                         to="/"
-                        className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                        className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors mb-4 sm:mb-0 self-center"
                     >
                         <ArrowLeft className="w-5 h-5" />
                         <span>Voltar</span>

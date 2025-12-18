@@ -54,8 +54,8 @@ export default function LandingPage() {
                         animate={{ opacity: 1, x: 0 }}
                         className="flex items-center gap-3"
                     >
-                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden bg-gradient-to-br from-purple-600 to-pink-600 p-0.5">
-                            <img src="/logo.png" alt="1Fan" className="w-full h-full object-cover rounded-full" />
+                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-600 to-pink-600">
+                            <span className="text-white font-bold text-sm md:text-base">1F</span>
                         </div>
                         <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                             1Fan
@@ -141,7 +141,7 @@ export default function LandingPage() {
                                 {[1, 2, 3].map((num, index) => (
                                     <motion.img
                                         key={num}
-                                        src={`/screenshots/screen${num}.jpg`}
+                                        src={`${import.meta.env.BASE_URL}screenshots/screen${num}.jpg`}
                                         alt={`App Screen ${num}`}
                                         initial={{ opacity: 0 }}
                                         animate={{
@@ -359,8 +359,8 @@ export default function LandingPage() {
                 <div className="container mx-auto max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden bg-gradient-to-br from-purple-600 to-pink-600 p-0.5">
-                                <img src="/logo.png" alt="1Fan" className="w-full h-full object-cover rounded-full" />
+                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-600 to-pink-600">
+                                <span className="text-white font-bold text-sm md:text-base">1F</span>
                             </div>
                             <span className="text-xl font-bold">1Fan</span>
                         </div>

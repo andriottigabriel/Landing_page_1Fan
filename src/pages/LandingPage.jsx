@@ -106,7 +106,7 @@ export default function LandingPage() {
                             <span className="text-white">com seus Artistas</span>
                         </h1>
 
-                        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed text-center">
                             A ponte entre você e seus <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-semibold">artistas favoritos</span>.
                             Registre shows, compartilhe momentos e conecte-se com quem vive a mesma paixão musical.
                         </p>

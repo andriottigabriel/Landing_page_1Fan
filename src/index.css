@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+/* Force robust centering since standard Tailwind v4 classes might be failing on production */
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 * {
     margin: 0;
     padding: 0;

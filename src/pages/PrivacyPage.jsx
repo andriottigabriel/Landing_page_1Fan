@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, UserCheck, FileText, ArrowLeft } from 'lucide-react';
-import ParticleCanvas from '../ParticleCanvas';
+import ParticleCanvas from './ParticleCanvas';
 import { Link } from 'react-router-dom';
 
 export default function PrivacyPage() {

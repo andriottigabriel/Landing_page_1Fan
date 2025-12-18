@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Music, Users, Heart, Star, Shield, ArrowRight, Play } from 'lucide-react';
-import ParticleCanvas from '../ParticleCanvas';
+import ParticleCanvas from './ParticleCanvas';
 import { Link } from 'react-router-dom';
 
 export default function LandingPage() {

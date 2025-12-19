@@ -41,7 +41,7 @@ export default function PrivacyPage() {
         <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-purple-950 to-zinc-950 text-white overflow-hidden">
             <ParticleCanvas />
 
-            {/* Navigation */}
+            {/* navegacao */}
             <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
                 <div className="container mx-auto px-6 py-4">
                     <Link
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
                 </div>
             </nav>
 
-            {/* Header */}
+            {/* cabeçalho */}
             <section className="relative pt-32 pb-16 px-6">
                 <div className="container mx-auto max-w-4xl text-center">
                     <motion.div
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
                 </div>
             </section>
 
-            {/* Introduction */}
+            {/* introducao */}
             <section className="py-8 px-6">
                 <div className="container mx-auto max-w-4xl">
                     <motion.div
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
                 </div>
             </section>
 
-            {/* Privacy Sections */}
+            {/* seção privacidade */}
             <section className="py-12 px-6">
                 <div className="container mx-auto max-w-4xl space-y-6">
                     {sections.map((section, index) => (
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
                 </div>
             </section>
 
-            {/* LGPD Compliance */}
+            {/* LGPD  */}
             <section className="py-12 px-6">
                 <div className="container mx-auto max-w-4xl">
                     <motion.div
@@ -173,7 +173,7 @@ export default function PrivacyPage() {
                 </div>
             </section>
 
-            {/* Contact */}
+            {/* Contato */}
             <section className="py-12 px-6">
                 <div className="container mx-auto max-w-4xl">
                     <motion.div

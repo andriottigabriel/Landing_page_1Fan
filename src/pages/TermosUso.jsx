@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+caimport { motion } from 'framer-motion';
 import { Shield, FileText, AlertTriangle, Copyright, ArrowLeft, CheckCircle } from 'lucide-react';
 import ParticleCanvas from '../components/ParticleCanvas';
 import { Link } from 'react-router-dom';
@@ -31,7 +31,7 @@ export default function TermsPage() {
         <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-purple-950 to-zinc-950 text-white overflow-hidden">
             <ParticleCanvas />
 
-            {/* Navigation */}
+            {/* Navvegacaon */}
             <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
                 <div className="container mx-auto px-6 py-4">
                     <Link
@@ -44,7 +44,7 @@ export default function TermsPage() {
                 </div>
             </nav>
 
-            {/* Header */}
+            {/* cabecalho */}
             <section className="relative pt-32 pb-16 px-6">
                 <div className="container mx-auto max-w-4xl text-center">
                     <motion.div
@@ -77,7 +77,7 @@ export default function TermsPage() {
                 </div>
             </section>
 
-            {/* Introduction */}
+            {/* introducao */}
             <section className="py-8 px-6">
                 <div className="container mx-auto max-w-4xl">
                     <motion.div
@@ -94,7 +94,7 @@ export default function TermsPage() {
                 </div>
             </section>
 
-            {/* Terms Sections */}
+            {/* Termos */}
             <section className="py-12 px-6">
                 <div className="container mx-auto max-w-4xl space-y-6">
                     {sections.map((section, index) => (

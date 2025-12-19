@@ -156,7 +156,7 @@ export default function LandingPage() {
                                     />
                                 ))}
 
-                                {/* gradiente pra dar um tchan */}
+                                {/* gradiente */}
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 pointer-events-none" />
                             </div>
                         </div>

@@ -80,11 +80,7 @@ export default function LandingPage() {
                 </div>
             </nav>
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
             {/* seção principal (hero) */}
-=======
-            {/* seção 01 */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
             <section className="relative pt-32 pb-20 px-6">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -128,11 +124,7 @@ export default function LandingPage() {
                         </motion.div>
                     </motion.div>
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
                     {/* seção do celular */}
-=======
-                    {/* mochup celular */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -141,17 +133,10 @@ export default function LandingPage() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent blur-3xl max-w-lg mx-auto" />
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
                         {/* moldura do celular em css */}
                         <div className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-[8px] border-zinc-900 shadow-2xl shadow-purple-500/30 overflow-hidden">
 
                             {/* conteúdo da tela - slideshow */}
-=======
-                        {/* css frame celular */}
-                        <div className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-[8px] border-zinc-900 shadow-2xl shadow-purple-500/30 overflow-hidden">
-
-                            {/* Slide */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
                             <div className="relative w-full h-full bg-zinc-950 overflow-hidden">
                                 {[1, 2, 3].map((num, index) => (
                                     <motion.img
@@ -171,20 +156,12 @@ export default function LandingPage() {
                                     />
                                 ))}
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
                                 {/* gradiente pra dar um tchan */}
-=======
-                                {/* gradientee */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 pointer-events-none" />
                             </div>
                         </div>
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
                         {/* elementos decorativos atrás do celular */}
-=======
-                        {/* elementos celular */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -194,11 +171,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
             {/* seção de conexão - nova */}
-=======
-            {/* conexões */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
             <section className="py-20 px-6 relative">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -277,11 +250,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
             {/* seção de recursos */}
-=======
-            {/* seção 02 */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
             <section className="py-20 px-6 relative">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -346,11 +315,7 @@ export default function LandingPage() {
                                 Baixe o 1Fan agora e conecte-se com a comunidade musical
                             </p>
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
                             {/* espaço pro qr code */}
-=======
-                            {/* QR Code imagem */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
                             <div className="inline-block p-6 rounded-2xl bg-white mb-8">
                                 <div className="w-48 h-48 bg-gradient-to-br from-purple-200 to-pink-200 rounded-xl flex items-center justify-center">
                                     <div className="text-center">
@@ -372,11 +337,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
             {/* seção de contato */}
-=======
-            {/* contato */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
             <section className="py-20 px-6 relative border-t border-white/5">
                 <div className="container mx-auto max-w-4xl text-center">
                     <h2 className="text-3xl font-bold mb-6">Precisa de ajuda?</h2>
@@ -393,11 +354,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-<<<<<<< HEAD:src/pages/PaginaInicial.jsx
             {/* rodapé */}
-=======
-            {/* rodape */}
->>>>>>> ffdb7c7b488d171d8c029a6fda48405f4904b8de:src/pages/LandingPage.jsx
             <footer className="py-12 px-6 border-t border-white/10 backdrop-blur-sm">
                 <div className="container mx-auto max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">

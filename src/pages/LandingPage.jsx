@@ -46,7 +46,7 @@ export default function LandingPage() {
         <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-purple-950 to-zinc-950 text-white overflow-x-hidden">
             <ParticleCanvas />
 
-            {/* Navigation */}
+            {/* navegação */}
             <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
                 <div className="container mx-auto px-6 py-4 flex items-center justify-between">
                     <motion.div
@@ -80,7 +80,7 @@ export default function LandingPage() {
                 </div>
             </nav>
 
-            {/* Hero Section */}
+            {/* seção 01 */}
             <section className="relative pt-32 pb-20 px-6">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -124,7 +124,7 @@ export default function LandingPage() {
                         </motion.div>
                     </motion.div>
 
-                    {/* Phone Mockup Section */}
+                    {/* mochup celular */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -133,10 +133,10 @@ export default function LandingPage() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent blur-3xl max-w-lg mx-auto" />
 
-                        {/* CSS Phone Frame */}
+                        {/* css frame celular */}
                         <div className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-[8px] border-zinc-900 shadow-2xl shadow-purple-500/30 overflow-hidden">
 
-                            {/* Screen Content - Slideshow */}
+                            {/* Slide */}
                             <div className="relative w-full h-full bg-zinc-950 overflow-hidden">
                                 {[1, 2, 3].map((num, index) => (
                                     <motion.img
@@ -146,7 +146,7 @@ export default function LandingPage() {
                                         initial={{ opacity: 0 }}
                                         animate={{
                                             opacity: currentScreen === index ? 1 : 0,
-                                            // Normal scale, since we control crop with height/top
+                                            // escala normal
                                             scale: currentScreen === index ? 1.0 : 1.05
                                         }}
                                         transition={{ duration: 0.8 }}
@@ -156,12 +156,12 @@ export default function LandingPage() {
                                     />
                                 ))}
 
-                                {/* Overlay Gradient for elegance */}
+                                {/* gradientee */}
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 pointer-events-none" />
                             </div>
                         </div>
 
-                        {/* Decoration Elements behind phone */}
+                        {/* elementos celular */}
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -171,7 +171,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Connection Section - NEW */}
+            {/* conexões */}
             <section className="py-20 px-6 relative">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -250,7 +250,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Features Section */}
+            {/* seção 02 */}
             <section className="py-20 px-6 relative">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -296,7 +296,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Download CTA Section */}
+            {/* seção de download */}
             <section className="py-20 px-6 relative">
                 <div className="container mx-auto max-w-4xl">
                     <motion.div
@@ -315,7 +315,7 @@ export default function LandingPage() {
                                 Baixe o 1Fan agora e conecte-se com a comunidade musical
                             </p>
 
-                            {/* QR Code Placeholder */}
+                            {/* QR Code imagem */}
                             <div className="inline-block p-6 rounded-2xl bg-white mb-8">
                                 <div className="w-48 h-48 bg-gradient-to-br from-purple-200 to-pink-200 rounded-xl flex items-center justify-center">
                                     <div className="text-center">
@@ -337,7 +337,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Contact Section */}
+            {/* contato */}
             <section className="py-20 px-6 relative border-t border-white/5">
                 <div className="container mx-auto max-w-4xl text-center">
                     <h2 className="text-3xl font-bold mb-6">Precisa de ajuda?</h2>
@@ -354,7 +354,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Footer */}
+            {/* rodape */}
             <footer className="py-12 px-6 border-t border-white/10 backdrop-blur-sm">
                 <div className="container mx-auto max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">

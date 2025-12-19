@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Music, Users, Heart, Star, Shield, ArrowRight, Play } from 'lucide-react';
-import ParticleCanvas from './ParticleCanvas';
+import ParticleCanvas from '../components/ParticleCanvas';
 import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
@@ -46,7 +46,7 @@ export default function LandingPage() {
         <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-purple-950 to-zinc-950 text-white overflow-x-hidden">
             <ParticleCanvas />
 
-            {/* Navigation */}
+            {/* navegação */}
             <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
                 <div className="container mx-auto px-6 py-4 flex items-center justify-between">
                     <motion.div
@@ -54,8 +54,8 @@ export default function LandingPage() {
                         animate={{ opacity: 1, x: 0 }}
                         className="flex items-center gap-3"
                     >
-                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-600 to-pink-600">
-                            <span className="text-white font-bold text-sm md:text-base">1F</span>
+                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden bg-gradient-to-br from-purple-600 to-pink-600 p-0.5">
+                            <img src="logo.png" alt="1Fan" className="w-full h-full object-cover rounded-full" />
                         </div>
                         <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                             1Fan
@@ -80,7 +80,7 @@ export default function LandingPage() {
                 </div>
             </nav>
 
-            {/* Hero Section */}
+            {/* seção principal (hero) */}
             <section className="relative pt-32 pb-20 px-6">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -106,7 +106,7 @@ export default function LandingPage() {
                             <span className="text-white">com seus Artistas</span>
                         </h1>
 
-                        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed text-center">
+                        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
                             A ponte entre você e seus <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-semibold">artistas favoritos</span>.
                             Registre shows, compartilhe momentos e conecte-se com quem vive a mesma paixão musical.
                         </p>
@@ -124,7 +124,7 @@ export default function LandingPage() {
                         </motion.div>
                     </motion.div>
 
-                    {/* Phone Mockup Section */}
+                    {/* seção do celular */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -133,15 +133,15 @@ export default function LandingPage() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent blur-3xl max-w-lg mx-auto" />
 
-                        {/* CSS Phone Frame */}
+                        {/* moldura do celular em css */}
                         <div className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-[8px] border-zinc-900 shadow-2xl shadow-purple-500/30 overflow-hidden">
 
-                            {/* Screen Content - Slideshow */}
+                            {/* conteúdo da tela - slideshow */}
                             <div className="relative w-full h-full bg-zinc-950 overflow-hidden">
                                 {[1, 2, 3].map((num, index) => (
                                     <motion.img
                                         key={num}
-                                        src={`${import.meta.env.BASE_URL}screenshots/screen${num}.jpg`}
+                                        src={`screenshots/screen${num}.jpg`}
                                         alt={`App Screen ${num}`}
                                         initial={{ opacity: 0 }}
                                         animate={{
@@ -156,12 +156,12 @@ export default function LandingPage() {
                                     />
                                 ))}
 
-                                {/* Overlay Gradient for elegance */}
+                                {/* gradiente pra dar um tchan */}
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 pointer-events-none" />
                             </div>
                         </div>
 
-                        {/* Decoration Elements behind phone */}
+                        {/* elementos decorativos atrás do celular */}
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -171,7 +171,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Connection Section - NEW */}
+            {/* seção de conexão - nova */}
             <section className="py-20 px-6 relative">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -250,7 +250,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Features Section */}
+            {/* seção de recursos */}
             <section className="py-20 px-6 relative">
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -296,7 +296,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Download CTA Section */}
+            {/* seção de download */}
             <section className="py-20 px-6 relative">
                 <div className="container mx-auto max-w-4xl">
                     <motion.div
@@ -315,7 +315,7 @@ export default function LandingPage() {
                                 Baixe o 1Fan agora e conecte-se com a comunidade musical
                             </p>
 
-                            {/* QR Code Placeholder */}
+                            {/* espaço pro qr code */}
                             <div className="inline-block p-6 rounded-2xl bg-white mb-8">
                                 <div className="w-48 h-48 bg-gradient-to-br from-purple-200 to-pink-200 rounded-xl flex items-center justify-center">
                                     <div className="text-center">
@@ -337,7 +337,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Contact Section */}
+            {/* seção de contato */}
             <section className="py-20 px-6 relative border-t border-white/5">
                 <div className="container mx-auto max-w-4xl text-center">
                     <h2 className="text-3xl font-bold mb-6">Precisa de ajuda?</h2>
@@ -345,22 +345,22 @@ export default function LandingPage() {
                         Tem alguma dúvida, sugestão ou precisa de suporte? Nossa equipe está pronta para te ouvir.
                     </p>
                     <a
-                        href="mailto:support@1fan.com"
+                        href="mailto:suporte@1fan.com"
                         className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-purple-500/30 bg-purple-500/10 hover:bg-purple-500/20 transition-all duration-300 text-purple-300 hover:text-purple-200"
                     >
                         <Shield className="w-5 h-5" />
-                        Fale Conosco (support@1fan.com)
+                        Fale Conosco (suporte@1fan.com)
                     </a>
                 </div>
             </section>
 
-            {/* Footer */}
+            {/* rodapé */}
             <footer className="py-12 px-6 border-t border-white/10 backdrop-blur-sm">
                 <div className="container mx-auto max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-600 to-pink-600">
-                                <span className="text-white font-bold text-sm md:text-base">1F</span>
+                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden bg-gradient-to-br from-purple-600 to-pink-600 p-0.5">
+                                <img src="logo.png" alt="1Fan" className="w-full h-full object-cover rounded-full" />
                             </div>
                             <span className="text-xl font-bold">1Fan</span>
                         </div>
@@ -372,14 +372,14 @@ export default function LandingPage() {
                             <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
                                 Termos de Uso
                             </Link>
-                            <a href="mailto:support@1fan.com" className="text-gray-300 hover:text-white transition-colors">
+                            <a href="mailto:suporte@1fan.com" className="text-gray-300 hover:text-white transition-colors">
                                 Contato
                             </a>
                         </div>
                     </div>
 
                     <div className="mt-8 text-center text-gray-400 text-sm">
-                        <p>© 2025 1Fan. Todos os direitos reservados.</p>
+                        <p>© 2025 1Fan®. Todos os direitos reservados. Desenvolvido por Gand</p>
                         <p className="mt-2">Conectando fãs e artistas ao redor do mundo 🎵</p>
                     </div>
                 </div>

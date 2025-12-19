@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, UserCheck, FileText, ArrowLeft } from 'lucide-react';
-import ParticleCanvas from './ParticleCanvas';
+import ParticleCanvas from '../components/ParticleCanvas';
 import { Link } from 'react-router-dom';
 
 export default function PrivacyPage() {
@@ -43,10 +43,10 @@ export default function PrivacyPage() {
 
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
-                <div className="container mx-auto px-6 py-4 flex flex-col items-center sm:flex-row sm:justify-between">
+                <div className="container mx-auto px-6 py-4">
                     <Link
                         to="/"
-                        className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors mb-4 sm:mb-0 self-center"
+                        className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                     >
                         <ArrowLeft className="w-5 h-5" />
                         <span>Voltar</span>
@@ -196,11 +196,11 @@ export default function PrivacyPage() {
                 </div>
             </section>
 
-            {/* Footer */}
+            {/* rodapé */}
             <footer className="py-12 px-6 border-t border-white/10 backdrop-blur-sm mt-12">
                 <div className="container mx-auto max-w-4xl text-center">
                     <p className="text-gray-400 text-sm">
-                        © 2025 1Fan. Todos os direitos reservados.
+                        © 2025 1Fan®. Todos os direitos reservados. Desenvolvido por Gand
                     </p>
                     <p className="text-gray-500 text-xs mt-2">
                         Conectando fãs e artistas com responsabilidade e transparência

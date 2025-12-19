@@ -1,18 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
-import PrivacyPage from './pages/PrivacyPage'
-import TermsPage from './pages/TermsPage'
+import PaginaInicial from './pages/PaginaInicial'
+import PoliticaPrivacidade from './pages/PoliticaPrivacidade'
+import TermosUso from './pages/TermosUso'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <HashRouter>
             <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/privacy" element={<PrivacyPage />} />
-                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/" element={<PaginaInicial />} />
+                <Route path="/privacy" element={<PoliticaPrivacidade />} />
+                <Route path="/terms" element={<TermosUso />} />
             </Routes>
         </HashRouter>
     </React.StrictMode>,

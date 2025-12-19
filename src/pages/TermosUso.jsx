@@ -1,34 +1,29 @@
 import { motion } from 'framer-motion';
-import { FileText, Shield, UserCheck, Scale, AlertCircle, ArrowLeft } from 'lucide-react';
-import ParticleCanvas from './ParticleCanvas';
+import { Shield, FileText, AlertTriangle, Copyright, ArrowLeft, CheckCircle } from 'lucide-react';
+import ParticleCanvas from '../components/ParticleCanvas';
 import { Link } from 'react-router-dom';
 
 export default function TermsPage() {
     const sections = [
         {
-            icon: Scale,
-            title: 'Termos de Uso',
-            content: 'Ao acessar o 1Fan, você concorda com estes termos. O uso da plataforma é gratuito, mas requer cadastro e conformidade com nossas regras de comunidade.'
+            icon: CheckCircle,
+            title: '1. Uso Responsável',
+            content: 'O 1Fan é uma plataforma dedicada a compartilhar experiências musicais autênticas. Ao utilizar nossa plataforma, você concorda em não publicar conteúdo ofensivo, ilegal, discriminatório ou que viole direitos de terceiros. Mantenha a comunidade segura e positiva para todos.'
         },
         {
-            icon: UserCheck,
-            title: 'Elegibilidade',
-            content: 'Você deve ter pelo menos 13 anos para usar o 1Fan. Menores de 18 anos devem ter permissão dos pais ou responsáveis.'
+            icon: AlertTriangle,
+            title: '2. Moderação de Conteúdo',
+            content: 'Não toleramos discurso de ódio, assédio, nudez, conteúdo violento ou bullying. Reservamo-nos o direito de remover qualquer conteúdo que viole estas diretrizes e suspender contas envolvidas em tais atividades para proteger nossa comunidade.'
         },
         {
-            icon: AlertCircle,
-            title: 'Conduta do Usuário',
-            content: 'É proibido postar conteúdo ofensivo, spam, ou violar direitos autorais. Respeite os outros fãs e artistas. O descumprimento pode levar ao banimento.'
+            icon: Copyright,
+            title: '3. Propriedade Intelectual',
+            content: 'Você mantém os direitos autorais sobre o conteúdo original que publica no 1Fan. No entanto, ao postar, você nos concede uma licença não exclusiva para exibir, reproduzir e distribuir seu conteúdo dentro da plataforma.'
         },
         {
             icon: Shield,
-            title: 'Propriedade Intelectual',
-            content: 'Todo o conteúdo do app, logos e design pertencem ao 1Fan. O conteúdo gerado pelo usuário continua sendo do usuário, mas nos concede licença de exibição.'
-        },
-        {
-            icon: FileText,
-            title: 'Limitação de Responsabilidade',
-            content: 'O 1Fan não se responsabiliza por encontros presenciais entre usuários ou por mudanças em agendas de shows dos artistas.'
+            title: '4. Suspensão de Conta',
+            content: 'Podemos suspender ou encerrar sua conta permanentemente se você violar estes Termos de Uso repetidamente ou cometer infrações graves. A segurança dos nossos usuários é nossa prioridade absoluta.'
         }
     ];
 
@@ -38,10 +33,10 @@ export default function TermsPage() {
 
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
-                <div className="container mx-auto px-6 py-4 flex flex-col items-center sm:flex-row sm:justify-between">
+                <div className="container mx-auto px-6 py-4">
                     <Link
                         to="/"
-                        className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors mb-4 sm:mb-0 self-center"
+                        className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                     >
                         <ArrowLeft className="w-5 h-5" />
                         <span>Voltar</span>
@@ -58,7 +53,7 @@ export default function TermsPage() {
                         transition={{ duration: 0.8 }}
                     >
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 mb-6">
-                            <Scale className="w-10 h-10" />
+                            <FileText className="w-10 h-10" />
                         </div>
 
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -68,7 +63,7 @@ export default function TermsPage() {
                         </h1>
 
                         <p className="text-xl text-gray-300 mb-4">
-                            Regras e diretrizes da plataforma 1Fan
+                            Regras da nossa comunidade
                         </p>
 
                         <p className="text-sm text-gray-400">
@@ -77,6 +72,23 @@ export default function TermsPage() {
                                 month: 'long',
                                 year: 'numeric'
                             })}
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Introduction */}
+            <section className="py-8 px-6">
+                <div className="container mx-auto max-w-4xl">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                        className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+                    >
+                        <p className="text-lg text-gray-300 leading-relaxed">
+                            Bem-vindo ao <strong className="text-white">1Fan</strong>! Estes termos regem o uso do nosso aplicativo e serviços.
+                            Ao criar uma conta ou usar o 1Fan, você concorda em cumprir estas regras para garantir uma experiência segura e divertida para todos os fãs de música.
                         </p>
                     </motion.div>
                 </div>
@@ -111,11 +123,11 @@ export default function TermsPage() {
                 </div>
             </section>
 
-            {/* Footer */}
+            {/* rodapé */}
             <footer className="py-12 px-6 border-t border-white/10 backdrop-blur-sm mt-12">
                 <div className="container mx-auto max-w-4xl text-center">
                     <p className="text-gray-400 text-sm">
-                        © 2025 1Fan. Todos os direitos reservados.
+                        © 2025 1Fan®. Todos os direitos reservados. Desenvolvido por Gand
                     </p>
                 </div>
             </footer>

@@ -12,14 +12,14 @@ export default function ParticleCanvas() {
 
         let animationFrameId;
         let particles = [];
-        let mouse = { x: null, y: null, radius: 100 }; // Softer radius
+        let mouse = { x: null, y: null, radius: 100 }; // Softer
 
-        // Set canvas size to cover the entire scrollable document
+        // canvas
         const resizeCanvas = () => {
             if (!canvas) return;
             canvas.width = window.innerWidth;
 
-            // Calculate maximum height to cover full scrollable area
+            // calculo max scroll
             const docHeight = Math.max(
                 document.body.scrollHeight,
                 document.documentElement.scrollHeight,
@@ -41,13 +41,13 @@ export default function ParticleCanvas() {
                 this.y = y;
                 this.baseX = x;
                 this.baseY = y;
-                this.density = (Math.random() * 35) + 2; // Increased density (+10% more)
-                this.size = Math.random() * 3.3 + 1.4; // Slightly smaller particles (-5%)
-                // Stronger colors
+                this.density = (Math.random() * 35) + 2; // densidade(+10% )
+                this.size = Math.random() * 3.3 + 1.4; // particilas (-5%)
+                // cores
                 const colors = [
-                    `rgba(147, 51, 234, ${Math.random() * 0.5 + 0.3})`, // Purple (stronger opacity)
-                    `rgba(219, 39, 119, ${Math.random() * 0.5 + 0.3})`, // Pink
-                    `rgba(168, 85, 247, ${Math.random() * 0.5 + 0.3})`, // Light purple
+                    `rgba(147, 51, 234, ${Math.random() * 0.5 + 0.3})`, // roxo (opacidade)
+                    `rgba(219, 39, 119, ${Math.random() * 0.5 + 0.3})`, // rosa
+                    `rgba(168, 85, 247, ${Math.random() * 0.5 + 0.3})`, // roxo leve
                 ];
                 this.color = colors[Math.floor(Math.random() * colors.length)];
             }
@@ -62,14 +62,15 @@ export default function ParticleCanvas() {
             }
 
             update() {
-                // Calculate distance from mouse (relative to viewport)
-                // We need to account for scroll position if we want mouse interaction to be accurate on a large canvas
-                // But for simplicity and performance on a background effect, we can use client coordinates 
-                // mapped to the canvas coordinates (which are absolute).
+ // Calcular a distância do mouse (relativa ao viewport);;;;
+// Precisamos levar em conta a posição de rolagem se quisermos que a interação com o mouse seja precisa em um canvas grande
+// Mas, por simplicidade e desempenho em um efeito de fundo, podemos usar coordenadas do cliente
+// mapeadas para as coordenadas do canvas (que são absoluta
 
-                // Mouse event gives clientX/Y (viewport relative). 
-                // Canvas is absolute 0,0 relative to document.
-                // So mouse position on canvas = clientY + window.scrollY
+// a rolagem do mouse fornece clientX/Y (relativos à viewport)
+// O canvas está em 0,0 absoluto em relação ao doc
+//  a posição do mouse no canvas = clientY + window.scrollY
+
 
                 let mouseX = mouse.x;
                 let mouseY = mouse.y !== null ? mouse.y + window.scrollY : null;
@@ -90,7 +91,7 @@ export default function ParticleCanvas() {
                         this.x -= directionX;
                         this.y -= directionY;
                     } else {
-                        // Return to original
+                        // retorno original
                         if (this.x !== this.baseX) {
                             let dx = this.x - this.baseX;
                             this.x -= dx / 10;
@@ -101,7 +102,7 @@ export default function ParticleCanvas() {
                         }
                     }
                 } else {
-                    // Return to original if no mouse
+                    // retorno posição mouse
                     if (this.x !== this.baseX) {
                         let dx = this.x - this.baseX;
                         this.x -= dx / 10;
@@ -116,7 +117,7 @@ export default function ParticleCanvas() {
             }
         }
 
-        // Initialize particles
+        // iniciio particulas
         const init = () => {
             particles = [];
             if (!canvas) return;
@@ -124,8 +125,8 @@ export default function ParticleCanvas() {
             const width = canvas.width;
             const height = canvas.height;
 
-            // Limit max particles based on area density, but cap it to avoid performance issues on very long pages
-            // Density factor 5650 (more particles +15%)
+            // limit max particulas
+            // densidade
             const numberOfParticles = Math.min(Math.floor((width * height) / 5650), 210);
 
             for (let i = 0; i < numberOfParticles; i++) {
@@ -135,20 +136,20 @@ export default function ParticleCanvas() {
             }
         };
 
-        // Animation loop
+        // animação loop
         const animate = () => {
             if (!ctx || !canvas) return;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Draw connections
+            // conxoes
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     let dx = particles[i].x - particles[j].x;
                     let dy = particles[i].y - particles[j].y;
                     let distance = Math.sqrt(dx * dx + dy * dy);
 
-                    if (distance < 120) { // Increased connection distance
-                        ctx.strokeStyle = `rgba(147, 51, 234, ${0.3 * (1 - distance / 120)})`; // Stronger lines
+                    if (distance < 120) { // distancia
+                        ctx.strokeStyle = `rgba(147, 51, 234, ${0.3 * (1 - distance / 120)})`; // linhas
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
@@ -162,7 +163,7 @@ export default function ParticleCanvas() {
             animationFrameId = requestAnimationFrame(animate);
         };
 
-        // Event handlers
+        // Eventos
         const handleMouseMove = (event) => {
             mouse.x = event.clientX;
             mouse.y = event.clientY;
@@ -185,14 +186,14 @@ export default function ParticleCanvas() {
             mouse.y = null;
         };
 
-        // Add listeners
+        // Add listas
         window.addEventListener('resize', resizeCanvas);
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('mouseleave', handleMouseLeave);
         window.addEventListener('touchmove', handleTouchMove);
         window.addEventListener('touchend', handleTouchEnd);
 
-        // Initial setup
+        // setup inicial
         resizeCanvas();
         animate();
 

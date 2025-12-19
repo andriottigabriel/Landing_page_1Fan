@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Force robust centering since standard Tailwind v4 classes might be failing on production */
+
 .mx-auto {
     margin-left: auto !important;
     margin-right: auto !important;
